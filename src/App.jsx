@@ -5,12 +5,14 @@ import Experience from './components/experience.jsx';
 import Projects from './components/projects.jsx';
 import Testimonial from './components/testimonial.jsx';
 import Contact from './components/contact.jsx';
+// import About from './components/about.jsx';
 
 function App() {
   return (
     <div className="App">
       <Header/>
       <Hero/>
+      {/* <About/> */}
       <Experience/>
       <Projects />
       <Testimonial/>

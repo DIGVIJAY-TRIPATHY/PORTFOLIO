@@ -77,7 +77,7 @@
 }
 
 .primary-btn:hover {
-  background: var(--accent-color);
+  border: 2px solid blue;
   color: #fff;
   transform: scale(1.1);
 }
@@ -88,7 +88,7 @@
 }
 
 .outline-btn:hover {
-  background: var(--accent-color);
+  border: 2px solid blue;
   color: #fff;
   transform: scale(1.1);
 }
