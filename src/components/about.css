@@ -1,0 +1,167 @@
+/* Tabs */
+.about-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  padding: 0.6rem 1.6rem;
+  border-radius: 25px;
+  border: 2px solid var(--accent-color);
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.tab-btn:hover {
+  transform: translateY(-3px);
+  color: var(--accent-color);
+}
+
+.tab-btn.active {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: rgb(81, 81, 234);
+  border-radius: 25px;
+}
+
+/* Content */
+.about-content {
+  max-width: 850px;
+  margin: auto;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2rem;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  animation: floatUp 0.8s ease;
+}
+
+/* Timeline */
+.timeline {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.timeline li {
+  margin-bottom: 1.2rem;
+}
+
+.year {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  margin-bottom: 0.2rem;
+}
+
+/* Highlights */
+.highlight-list li {
+  margin: 0.6rem 0;
+  color: var(--text-secondary);
+  transition: 0.3s ease;
+}
+
+.highlight-list li:hover {
+  transform: translateX(5px);
+  color: var(--accent-color);
+}
+
+/* Animations */
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* =======================================
+   RESPONSIVE DESIGN FOR ABOUT SECTION
+======================================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .about-tabs {
+    gap: 1.2rem;
+  }
+
+  .tab-btn {
+    padding: 0.55rem 1.3rem;
+    font-size: 0.95rem;
+  }
+
+  .glass-card {
+    padding: 1.6rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-tabs {
+    gap: 0.5rem;
+  }
+
+  .tab-btn {
+    flex: 1 1 calc(33% - 0.8rem);
+    padding: 0.55rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .about-content {
+    padding: 1 1rem;
+  }
+
+  .glass-card {
+    padding: 1rem;
+  }
+
+  .timeline li p,
+  .highlight-list li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .tab-btn {
+    flex: 1 1 100%;
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .glass-card {
+    padding: 1rem;
+  }
+
+  .year {
+    font-size: 0.85rem;
+  }
+
+  .timeline li p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small (safe for notch phones) */
+@media (max-width: 360px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .tab-btn {
+    font-size: 0.8rem;
+  }
+
+  .glass-card p {
+    font-size: 0.9rem;
+  }
+}
