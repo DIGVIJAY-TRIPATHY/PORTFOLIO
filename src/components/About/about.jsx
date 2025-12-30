@@ -13,13 +13,15 @@ function About() {
           className={activeTab === "about" ? "tab-btn active" : "tab-btn"}
           onClick={() => setActiveTab("about")}
         >
-          About
+          <span className="tab-icon">👤</span>
+          <span className="tab-text">About</span>
         </button>
         <button
           className={activeTab === "education" ? "tab-btn active" : "tab-btn"}
           onClick={() => setActiveTab("education")}
         >
-          Education
+          <span className="tab-icon">🎓</span>
+          <span className="tab-text">Education</span>
         </button>
         <button
           className={
@@ -27,63 +29,97 @@ function About() {
           }
           onClick={() => setActiveTab("professional")}
         >
-          Profession
+          <span className="tab-icon">💼</span>
+          <span className="tab-text">Professional</span>
         </button>
       </div>
 
       <div className="about-content">
         {activeTab === "about" && (
-          <div className="glass-card fade">
-            <h3>Who am I?</h3>
-            <p>
-              I'm <strong>Digvijay Tripathy</strong>, a passionate Frontend
+          <div className="glass-card" key="about">
+            <div className="card-header">
+              <h3>Who am I?</h3>
+            </div>
+            <p className="intro-text">
+              I'm <strong className="highlight-name">Digvijay Tripathy</strong>, a passionate Frontend
               Developer focused on building minimal yet interactive user
               experiences. I enjoy turning ideas into digital products using
               React, CSS magic, and modern UI trends.
             </p>
+            <div className="skills-badges">
+              <span className="badge">React</span>
+              <span className="badge">JavaScript</span>
+              <span className="badge">CSS3</span>
+              <span className="badge">UI/UX</span>
+            </div>
           </div>
         )}
 
         {activeTab === "education" && (
-          <div className="glass-card fade">
-            <h3>Education Journey</h3>
+          <div className="glass-card" key="education">
+            <div className="card-header">
+              <h3>Education Journey</h3>
+            </div>
             <ul className="timeline">
-              <li>
-                <span className="year">2023 - Present</span>
-                <p>
-                  <strong>B.Tech — NIT Bhubaneswar</strong>
-                  <br />
-                  Computer Science & Engineering
-                </p>
+              <li className="timeline-item">
+                <div className="timeline-marker"></div>
+                <div className="timeline-content">
+                  <span className="year">2023 - Present</span>
+                  <p>
+                    <strong>B.Tech — NIT Bhubaneswar</strong>
+                    <br />
+                    <span className="subtitle">Computer Science & Engineering</span>
+                  </p>
+                </div>
               </li>
-              <li>
-                <span className="year">2021 - 2023</span>
-                <p>
-                  <strong>Allen Career Institute</strong>
-                  <br />
-                  JEE Preparation
-                </p>
+              <li className="timeline-item">
+                <div className="timeline-marker"></div>
+                <div className="timeline-content">
+                  <span className="year">2021 - 2023</span>
+                  <p>
+                    <strong>Allen Career Institute</strong>
+                    <br />
+                    <span className="subtitle">JEE Preparation</span>
+                  </p>
+                </div>
               </li>
-              <li>
-                <span className="year">2020</span>
-                <p>
-                  <strong>High School</strong>
-                  <br />
-                  Graduated with Science specialization
-                </p>
+              <li className="timeline-item">
+                <div className="timeline-marker"></div>
+                <div className="timeline-content">
+                  <span className="year">2020</span>
+                  <p>
+                    <strong>High School</strong>
+                    <br />
+                    <span className="subtitle">Graduated with Science specialization</span>
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
         )}
 
         {activeTab === "professional" && (
-          <div className="glass-card fade">
-            <h3>What I Do</h3>
+          <div className="glass-card" key="professional">
+            <div className="card-header">
+              <h3>What I Do</h3>
+            </div>
             <ul className="highlight-list">
-              <li>⚡ Craft responsive & animated UIs</li>
-              <li>🚀 Build React-based interactive applications</li>
-              <li>🎨 Design aesthetic front-end dashboards</li>
-              <li>🧪 Optimize performance & UI/UX decisions</li>
+              <li>
+                <span className="icon">⚡</span>
+                <span className="text">Craft responsive & animated UIs</span>
+              </li>
+              <li>
+                <span className="icon">🚀</span>
+                <span className="text">Build React-based interactive applications</span>
+              </li>
+              <li>
+                <span className="icon">🎨</span>
+                <span className="text">Design aesthetic front-end dashboards</span>
+              </li>
+              <li>
+                <span className="icon">🧪</span>
+                <span className="text">Optimize performance & UI/UX decisions</span>
+              </li>
             </ul>
           </div>
         )}

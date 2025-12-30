@@ -6,6 +6,7 @@
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 3rem;
+  transition: font-size 0.3s ease;
 }
 
 .experience-container {
@@ -13,6 +14,7 @@
   margin: auto;
   display: grid;
   gap: 2rem;
+  grid-template-columns: 1fr;
 }
 
 .experience-card {
@@ -20,18 +22,154 @@
   padding: 2rem;
   border-radius: 16px;
   backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .experience-card h3 {
   margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  transition: font-size 0.3s ease;
 }
 
 .experience-card span {
   color: var(--accent-color);
   font-size: 0.9rem;
+  display: block;
+  transition: font-size 0.3s ease;
 }
 
 .experience-card p {
   margin-top: 1rem;
   color: var(--text-secondary);
+  line-height: 1.6;
+  transition: font-size 0.3s ease;
+}
+
+/* Tablet - Large screens (768px and up) */
+@media (min-width: 768px) {
+  .experience-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Medium tablets and small laptops (640px - 767px) */
+@media (max-width: 767px) {
+  .section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .experience-card {
+    padding: 1.75rem;
+  }
+
+  .experience-card h3 {
+    font-size: 1.35rem;
+  }
+}
+
+/* Mobile devices (480px - 639px) */
+@media (max-width: 639px) {
+  .section {
+    padding: 3rem 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .experience-container {
+    gap: 1.5rem;
+  }
+
+  .experience-card {
+    padding: 1.5rem;
+  }
+
+  .experience-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .experience-card span {
+    font-size: 0.85rem;
+  }
+
+  .experience-card p {
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+  }
+}
+
+/* Small mobile devices (below 480px) */
+@media (max-width: 479px) {
+  .section {
+    padding: 2.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-container {
+    gap: 1.25rem;
+  }
+
+  .experience-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .experience-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .experience-card span {
+    font-size: 0.8rem;
+  }
+
+  .experience-card p {
+    font-size: 0.9rem;
+    margin-top: 0.65rem;
+    line-height: 1.5;
+  }
+}
+
+/* Extra small devices (below 360px) */
+@media (max-width: 359px) {
+  .section {
+    padding: 2rem 0.75rem;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+  }
+
+  .experience-card {
+    padding: 1rem;
+  }
+
+  .experience-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .experience-card span {
+    font-size: 0.75rem;
+  }
+
+  .experience-card p {
+    font-size: 0.85rem;
+  }
 }
