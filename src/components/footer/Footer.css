@@ -417,6 +417,11 @@
     text-align: center;
   }
 
+  .footer-column h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .footer-column ul {
     align-items: center;
   }

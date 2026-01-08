@@ -45,20 +45,29 @@ function Header() {
         </li>
         <li>
           <a
-            href="#experience"
-            className="nav-links"
-            onClick={() => setMenuOpen(false)}
-          >
-            Experience
-          </a>
-        </li>
-        <li>
-          <a
             href="#projects"
             className="nav-links"
             onClick={() => setMenuOpen(false)}
           >
             Projects
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            className="nav-links"
+            onClick={() => setMenuOpen(false)}
+          >
+            Skills
+          </a>
+        </li>
+        <li>
+          <a
+            href="#experience"
+            className="nav-links"
+            onClick={() => setMenuOpen(false)}
+          >
+            Experience
           </a>
         </li>
         <li>
