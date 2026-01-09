@@ -54,7 +54,7 @@ function Header() {
         </li>
         <li>
           <a
-            href="#"
+            href="#skills"
             className="nav-links"
             onClick={() => setMenuOpen(false)}
           >

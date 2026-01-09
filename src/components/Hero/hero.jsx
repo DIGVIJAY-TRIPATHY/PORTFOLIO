@@ -21,8 +21,12 @@ function Hero() {
           <a href="#projects" className="btn primary-btn">
             View Projects
           </a>
-          <a href="#contact" className="btn outline-btn">
-            Contact Me
+          <a 
+            href="/path-to-your-resume.pdf" 
+            className="btn outline-btn" 
+            download="Digvijay_Tripathy_Resume.pdf"
+          >
+            Download Resume
           </a>
         </div>
       </div>

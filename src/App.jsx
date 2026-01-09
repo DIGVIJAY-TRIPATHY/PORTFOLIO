@@ -7,6 +7,7 @@ import Projects from './components/Projects/projects.jsx'
 import Testimonial from './components/Testimonial/testimonial.jsx'
 import Contact from './components/Contact/contact.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import Skills from './components/Skills/Skills.jsx'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header/>
       <Hero/>
       <About/>
+      <Skills/>
       <Projects />
       <Experience/>
       <Testimonial/>
