@@ -1,6 +1,6 @@
 import "./hero.css";
-import heroImg from "../../assets/digvijay.jpg";
-import resume from "../../../public/Digvijay_Tripathy_Resume.pdf"
+import heroImg from "../../assets/digvijay.png";
+import resume from "../../assets/Digvijay_Tripathy_Resume.pdf"
 
 function Hero() {
   return (

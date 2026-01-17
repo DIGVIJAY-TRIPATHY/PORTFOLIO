@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Footer.css";
-import resume from "../../../public/Digvijay_Tripathy_Resume.pdf"
+import resume from "../../assets/Digvijay_Tripathy_Resume.pdf"
 
 function Footer() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
