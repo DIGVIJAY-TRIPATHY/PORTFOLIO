@@ -15,7 +15,6 @@
   animation: fadeInUp 1s ease forwards;
 }
 
-/* IMAGE */
 .hero-image {
   display: flex;
   justify-content: center;
@@ -33,7 +32,6 @@
   
 }
 
-/* TEXT */
 .hero-content h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -55,7 +53,6 @@
   max-width: 520px;
 }
 
-/* BUTTONS */
 .hero-buttons {
   display: flex;
   gap: 1.5rem;
@@ -93,7 +90,6 @@
   transform: scale(1.1);
 }
 
-/* FLOAT ANIMATION */
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -106,7 +102,6 @@
   }
 }
 
-/* FADE IN */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -118,7 +113,6 @@
   }
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2.4rem;
@@ -129,7 +123,7 @@
   }
 
   .hero-image img {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
   }
 }
