@@ -77,9 +77,9 @@ function About() {
                 <div className="timeline-content">
                   <span className="year">2021 - 2023</span>
                   <p>
-                    <strong>Allen Career Institute</strong>
+                    <strong>Anandapur College</strong>
                     <br />
-                    <span className="subtitle">JEE Preparation</span>
+                    <span className="subtitle">12th completed with Science specialization</span>
                   </p>
                 </div>
               </li>
@@ -90,7 +90,7 @@ function About() {
                   <p>
                     <strong>High School</strong>
                     <br />
-                    <span className="subtitle">Graduated with Science specialization</span>
+                    <span className="subtitle">10th</span>
                   </p>
                 </div>
               </li>

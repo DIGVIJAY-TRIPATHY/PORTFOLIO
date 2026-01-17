@@ -1,5 +1,6 @@
 import "./hero.css";
 import heroImg from "../../assets/digvijay.jpg";
+import resume from "../../../public/Digvijay_Tripathy_Resume.pdf"
 
 function Hero() {
   return (
@@ -22,9 +23,9 @@ function Hero() {
             View Projects
           </a>
           <a 
-            href="/path-to-your-resume.pdf" 
+            href={resume}
             className="btn outline-btn" 
-            download="Digvijay_Tripathy_Resume.pdf"
+            download="./Digvijay_Tripathy_Resume.pdf"
           >
             Download Resume
           </a>
