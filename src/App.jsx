@@ -4,12 +4,27 @@ import Hero from './components/Hero/hero.jsx'
 import About from './components/About/about.jsx'
 import Experience from './components/Experience/experience.jsx'
 import Projects from './components/Projects/projects.jsx'
-import Testimonial from './components/Testimonial/testimonial.jsx'
 import Contact from './components/Contact/contact.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import Skills from './components/Skills/Skills.jsx'
+import { useState, useEffect } from 'react'
 
 function App() {
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const checkScrollTop = () => {
+      if (!showScroll && window.pageYOffset > 300) {
+        setShowScroll(true);
+      } else if (showScroll && window.pageYOffset <= 300) {
+        setShowScroll(false);
+      }
+    };
+
+    window.addEventListener('scroll', checkScrollTop);
+    return () => window.removeEventListener('scroll', checkScrollTop);
+  }, [showScroll]);
+
   return (
     <div className="App">
       <Header/>
@@ -18,9 +33,14 @@ function App() {
       <Skills/>
       <Projects />
       <Experience/>
-      <Testimonial/>
       <Contact/>
       <Footer/>
+      
+      {showScroll && (
+        <div className="scroll-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <i className="fas fa-arrow-up"></i>
+        </div>
+      )}
     </div>
   )
 }

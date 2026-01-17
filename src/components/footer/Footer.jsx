@@ -136,9 +136,7 @@ function Footer() {
         </p>
       </div>
 
-      <div className="scroll-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-        <i className="fas fa-arrow-up"></i>
-      </div>
+     
     </footer>
   );
 }
