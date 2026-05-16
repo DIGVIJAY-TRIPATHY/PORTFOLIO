@@ -1,5 +1,5 @@
 import "./hero.css";
-import heroImg from "../../assets/digvijay.jpeg";
+import heroImg from "../../assets/DIG.jpeg";
 import resume from "../../assets/Digvijay_Tripathy_Resume.pdf"
 
 function Hero() {

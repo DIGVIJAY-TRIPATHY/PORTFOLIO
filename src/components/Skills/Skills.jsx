@@ -1,14 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './Skills.css';
 
 function Skills() {
   const [activeCategory, setActiveCategory] = useState('frontend');
   const [hoveredSkill, setHoveredSkill] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const gridRef = useRef(null);
 
   useEffect(() => {
     setIsVisible(true);
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  // Reset active slide when category changes
+  useEffect(() => {
+    setActiveSlide(0);
+    if (gridRef.current) gridRef.current.scrollLeft = 0;
+  }, [activeCategory]);
+
+  // Track which card is centred while scrolling
+  const handleScroll = useCallback(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll('.skill-card'));
+    const gridCenter = grid.scrollLeft + grid.clientWidth / 2;
+    let closest = 0;
+    let minDist = Infinity;
+    cards.forEach((card, i) => {
+      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+      const dist = Math.abs(cardCenter - gridCenter);
+      if (dist < minDist) { minDist = dist; closest = i; }
+    });
+    setActiveSlide(closest);
+  }, []);
+
+  // Scroll to a specific dot/slide
+  const scrollToSlide = (index) => {
+    const grid = gridRef.current;
+    if (!grid) return;
+    const card = grid.querySelectorAll('.skill-card')[index];
+    if (card) {
+      const offset = card.offsetLeft - (grid.clientWidth - card.offsetWidth) / 2;
+      grid.scrollTo({ left: offset, behavior: 'smooth' });
+    }
+  };
 
   const skillsData = {
     frontend: [
@@ -73,12 +113,16 @@ function Skills() {
           ))}
         </div>
 
-        {/* Skills Grid */}
-        <div className="skills-grid">
+        {/* Skills Grid / Carousel */}
+        <div
+          className="skills-grid"
+          ref={gridRef}
+          onScroll={isMobile ? handleScroll : undefined}
+        >
           {skillsData[activeCategory].map((skill, index) => (
             <div
               key={skill.name}
-              className="skill-card"
+              className={`skill-card${isMobile && activeSlide === index ? ' slide-active' : ''}`}
               style={{ animationDelay: `${index * 0.05}s` }}
               onMouseEnter={() => setHoveredSkill(skill.name)}
               onMouseLeave={() => setHoveredSkill(null)}
@@ -95,7 +139,9 @@ function Skills() {
                   <div
                     className="skill-progress-fill"
                     style={{
-                      width: hoveredSkill === skill.name ? `${skill.level}%` : '0%',
+                      width: (hoveredSkill === skill.name || (isMobile && activeSlide === index))
+                        ? `${skill.level}%`
+                        : '0%',
                       background: `linear-gradient(90deg, ${skill.color}, ${skill.color}99)`,
                     }}
                   >
@@ -114,29 +160,24 @@ function Skills() {
           ))}
         </div>
 
-        {/* Stats Section */}
-        <div className="skills-stats">
-          <div className="stat-card">
-            <div className="stat-icon">🎯</div>
-            <h4 className="stat-number">24+</h4>
-            <p className="stat-label">Technologies</p>
-          </div>
-          <div className="stat-card">
-            <div className="stat-icon">💼</div>
-            <h4 className="stat-number">15+</h4>
-            <p className="stat-label">Projects</p>
-          </div>
-          <div className="stat-card">
-            <div className="stat-icon">⭐</div>
-            <h4 className="stat-number">3+</h4>
-            <p className="stat-label">Years Learning</p>
-          </div>
-          <div className="stat-card">
-            <div className="stat-icon">🚀</div>
-            <h4 className="stat-number">100%</h4>
-            <p className="stat-label">Dedication</p>
-          </div>
-        </div>
+        {/* Dot indicators + swipe hint — mobile only */}
+        {isMobile && (
+          <>
+            <div className="slide-dots">
+              {skillsData[activeCategory].map((_, index) => (
+                <button
+                  key={index}
+                  className={`slide-dot${activeSlide === index ? ' dot-active' : ''}`}
+                  onClick={() => scrollToSlide(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+            <div className="swipe-hint">
+              <span className="swipe-hint-arrow">›</span> swipe to explore
+            </div>
+          </>
+        )}
       </div>
     </section>
   );
