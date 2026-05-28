@@ -8,8 +8,8 @@ function Projects() {
       description: "Modern, minimalist portfolio featuring smooth animations, dark mode support, and dynamic project showcasing. Optimized for performance and accessibility.",
       icon: "🎨",
       tech: ["React", "CSS3", "Framer Motion", "Vite"],
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://digvijay-tripathy.netlify.app/",
+      githubLink: "https://github.com/DIGVIJAY-TRIPATHY/PORTFOLIO",
       status: "Live"
     },
     {
