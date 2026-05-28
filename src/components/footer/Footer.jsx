@@ -59,7 +59,7 @@ function Footer() {
               <span className="social-tooltip">GitHub</span>
             </a>
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/digvijay-tripathy-194aa8314/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -69,14 +69,14 @@ function Footer() {
               <span className="social-tooltip">LinkedIn</span>
             </a>
             <a
-              href="mailto:rudratripathy62@gmail.com"
+              href="mailto:tripathydigvijay7377@gmail.com"
               aria-label="Mail"
               className="social-link"
             >
               <i className="fas fa-envelope"></i>
               <span className="social-tooltip">Email</span>
             </a>
-            <a
+            {/* <a
               href="https://twitter.com/yourprofile"
               target="_blank"
               rel="noopener noreferrer"
@@ -85,7 +85,7 @@ function Footer() {
             >
               <i className="fab fa-twitter"></i>
               <span className="social-tooltip">Twitter</span>
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -115,9 +115,9 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="#contact">
+              {/* <a href="#contact">
                 <span className="link-arrow">→</span> Contact
-              </a>
+              </a> */}
             </li>
           </ul>
         </div>
@@ -143,9 +143,9 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="#blogs">
+              {/* <a href="#blogs">
                 <span className="link-arrow">→</span> Blogs
-              </a>
+              </a> */}
             </li>
             <li>
               <a href="#experience">
@@ -169,14 +169,14 @@ function Footer() {
               <div className="contact-icon">
                 <i className="fas fa-envelope"></i>
               </div>
-              <span>rudratripathy62@gmail.com</span>
+              <span>tripathydigvijay7377@gmail.com</span>
             </li>
-            <li className="contact-item">
+            {/* <li className="contact-item">
               <div className="contact-icon">
                 <i className="fas fa-phone"></i>
               </div>
               <span>+91 XXXXXXXXXX</span>
-            </li>
+            </li> */}
             <li className="contact-item">
               <div className="contact-icon">
                 <i className="fas fa-map-marker-alt"></i>

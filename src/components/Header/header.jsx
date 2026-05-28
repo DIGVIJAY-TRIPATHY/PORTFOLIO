@@ -61,7 +61,7 @@ function Header() {
             Projects
           </a>
         </li>
-        <li>
+        {/* <li>
           <a
             href="#experience"
             className="nav-links"
@@ -69,7 +69,7 @@ function Header() {
           >
             Experience
           </a>
-        </li>
+        </li> */}
         <li>
           <a
             href="#contact"

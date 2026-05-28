@@ -19,44 +19,44 @@ function Projects() {
       tech: ["React", "TypeScript", "TailwindCSS", "PDF.js"],
       liveLink: "#",
       githubLink: "#",
-      status: "Live"
-    },
-    {
-      title: "Travel Booking System",
-      description: "Full-stack travel booking platform with real-time availability, secure payment processing, and comprehensive admin dashboard for managing bookings and analytics.",
-      icon: "✈️",
-      tech: ["React", "Node.js", "MySQL", "Express", "Stripe"],
-      liveLink: "#",
-      githubLink: "#",
       status: "In Progress"
     },
-    {
-      title: "Task Management App",
-      description: "Collaborative task manager with drag-and-drop interface, team workspaces, real-time updates, and productivity analytics dashboard.",
-      icon: "✓",
-      tech: ["React", "Firebase", "Material-UI", "DnD Kit"],
-      liveLink: "#",
-      githubLink: "#",
-      status: "Live"
-    },
-    {
-      title: "E-Commerce Dashboard",
-      description: "Analytics dashboard for online stores featuring sales tracking, inventory management, customer insights, and interactive data visualizations.",
-      icon: "📊",
-      tech: ["React", "Chart.js", "PostgreSQL", "REST API"],
-      liveLink: "#",
-      githubLink: "#",
-      status: "Live"
-    },
-    {
-      title: "Weather Forecast App",
-      description: "Real-time weather application with 7-day forecasts, location detection, severe weather alerts, and beautiful animated weather backgrounds.",
-      icon: "🌤️",
-      tech: ["React", "OpenWeather API", "Geolocation", "CSS3"],
-      liveLink: "#",
-      githubLink: "#",
-      status: "Live"
-    }
+    // {
+    //   title: "Travel Booking System",
+    //   description: "Full-stack travel booking platform with real-time availability, secure payment processing, and comprehensive admin dashboard for managing bookings and analytics.",
+    //   icon: "✈️",
+    //   tech: ["React", "Node.js", "MySQL", "Express", "Stripe"],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    //   status: "In Progress"
+    // },
+    // {
+    //   title: "Task Management App",
+    //   description: "Collaborative task manager with drag-and-drop interface, team workspaces, real-time updates, and productivity analytics dashboard.",
+    //   icon: "✓",
+    //   tech: ["React", "Firebase", "Material-UI", "DnD Kit"],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    //   status: "Live"
+    // },
+    // {
+    //   title: "E-Commerce Dashboard",
+    //   description: "Analytics dashboard for online stores featuring sales tracking, inventory management, customer insights, and interactive data visualizations.",
+    //   icon: "📊",
+    //   tech: ["React", "Chart.js", "PostgreSQL", "REST API"],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    //   status: "Live"
+    // },
+    // {
+    //   title: "Weather Forecast App",
+    //   description: "Real-time weather application with 7-day forecasts, location detection, severe weather alerts, and beautiful animated weather backgrounds.",
+    //   icon: "🌤️",
+    //   tech: ["React", "OpenWeather API", "Geolocation", "CSS3"],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    //   status: "Live"
+    // }
   ];
 
   return (
